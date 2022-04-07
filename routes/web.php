@@ -30,3 +30,4 @@ Route::get('/signup', [HomeController::class, 'signup'])->name('signup');
 Route::get('/skills', [HomeController::class, 'skills'])->name('skills');
 Route::get('/experience', [HomeController::class, 'experience'])->name('experience');
 Route::get('/master', [HomeController::class, 'sidebar']);
+Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
