@@ -95,4 +95,10 @@ class HomeController extends Controller
     {
         return view('layout.master');
     }
+
+    // admin dashboard controller
+    public function admin()
+    {
+        return view('templates.admin');
+    }
 }
