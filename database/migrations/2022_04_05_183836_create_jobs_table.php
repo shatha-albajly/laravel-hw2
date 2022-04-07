@@ -19,8 +19,12 @@ return new class extends Migration
             $table->string("city")->nullable();
             $table->string("image");
             $table->string("requirements");
+            $table->string("user-id");
+
             // $table->foreignId('user_id');
             // $table->foreignIdFor(users::class);
+            $table->foreign('user-id')->references('users')->on('id');
+
 
             $table->string("company");
             $table->string("deadline")->nullable();

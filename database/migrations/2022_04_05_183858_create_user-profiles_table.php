@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('image');
             $table->string('phone');
             $table->string('user-id');
+            $table->foreign('user-id')->references('users')->on('id');
+
 
             $table->string('country');
             $table->string('state');
