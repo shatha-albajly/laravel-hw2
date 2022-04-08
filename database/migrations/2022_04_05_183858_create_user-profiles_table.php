@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->string('phone');
-            $table->string('user-id');
-            $table->foreign('user-id')->references('users')->on('id');
+            $table->tinyInteger('user-id');
+            $table->foreign('user-id')->references('id')->on('users');
 
 
             $table->string('country');
