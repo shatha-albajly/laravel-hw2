@@ -14,14 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jobs', function (Blueprint $table) {
-            $table->increments('id')->unsigned()->unique();
+            $table->id();
+            // $table->increments('id')->unsigned()->unique();
             $table->string("title");
             $table->string("city")->nullable();
             $table->string("image");
             $table->string("requirements");
-            $table->integer('user_id')->unique()->nullable();
+            $table->tinyInteger('user-id');
 
-            $table->foreign('user-id')->references('id')->on('users');
+            // $table->integer('user_id')->unique()->nullable();
+
+            // $table->foreign('user-id')->references('id')->on('users');
 
 
             $table->string("company");

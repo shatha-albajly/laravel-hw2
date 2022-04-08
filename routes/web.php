@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +29,9 @@ Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 Route::get('/qualification', [HomeController::class, 'qualification'])->name('qualification');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/signup', [HomeController::class, 'signup'])->name('signup');
+Route::post('/save_user', [AuthController::class, 'register_user'])->name('register_user');
+// Route::get('/save_user', [AuthController::class, 'user1'])->name('user1');
+
 Route::get('/skills', [HomeController::class, 'skills'])->name('skills');
 Route::get('/experience', [HomeController::class, 'experience'])->name('experience');
 Route::get('/master', [HomeController::class, 'sidebar']);
